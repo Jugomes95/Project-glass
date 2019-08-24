@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/*
+@font-face{
+   src:url("../fonts/bubblegum-sans-regular.otf");
+    Font-Family:'FonteLogo';
+}
+*/
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+    color: rgb(41, 41, 41);
+}
+body{
+    background-color: rgba(238, 238, 238, 0.63);
+    color: rgb(0,0,0,1);
+}
+
+div#interface{
+    width: 900px;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px grey;
+    padding: 10px;   /* é a margem interna*/
+    background-color: rgb(255, 255, 255);
+}
+
+header#cabecalho img#icone{
+    position: absolute;
+    left: 950px;
+    top:70px;
+}
+
+header#cabecalho h1{
+    font-family: Arial, Helvetica, sans-serif;
+    size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.336);
+    padding: 0px;
+    margin-bottom: 0px; 
+}
+
+header#cabecalho h2{
+    font-family: Arial, Helvetica, sans-serif;
+    size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho{
+    border-bottom: 1px #606060 solid; /*largura, cor e formato*/
+    height: 150px; /*altura*/
+    background: url("_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /*descolamento horizontal e deslocamento vertical*/
+}
+
+
+
+.fotolegenda{        /* quando for classe */
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+    position: relative; 
+}
+.fotolegenda img{
+    width: 100%;
+    length: 100%;
+}
+.fotolegenda figcaption{
+    opacity: 0; /*deixa a legenda transparente*/
+    position: absolute; /*posição zero dentro do .fotolegenda*/
+    top: 0px;
+    background-color:rgba(0,0,0,0.4);  /*fundo transparente preto */
+    color: white;
+    width: 100%; /*arruma o box transparente na imagem*/
+    height: 100%;
+    padding: 10px; /*espaço maior na legenda*/
+    box-sizing: border-box; /*cria um box dentro da borda*/
+    transition: opacity 1s;
+}
+.fotolegenda:hover figcaption{ /*cria o efeito de sobreosição*/
+    opacity: 1;    /*funciona quando passar o mouse por cima*/
+}
+
+
+
+/* para usar a mesma edição em outra imagem, ela teria que estar dentro de <figure> e com a mesma classe,
+ou seja, .fotolegenda*/
+
+
+
+
+/* editando o menu */
+
+nav#menu h1{
+    text-transform: uppercase;
+    display: none;
+
+}
+
+
+nav#menu ul{
+    position: absolute;
+    left: 600px;
+    top: -10px;
+}
+
+nav#menu li{
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: rgb(238, 236, 236);
+    padding: 5px;
+    margin: 2px;
+    position:relative;
+    transition: background-color 0.5s;
+}
+
+nav#menu li:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+    color: white;
+}
