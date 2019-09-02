@@ -1,47 +1,133 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
 
-[AQUI ENTRA UMA FOTO]
-
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
-
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="stylesheet" type="text/css" href="./_css/form.css"> 
 
 
-[BOTÃO ENVIAR]
+<script src="_javascript/funcoes.js"></script>
+<script>
+    function calc_total(){
+        var qtd = parseInt(document.getElementById("cqtd").value);
+        var tot = qtd*1500;
+        document.getElementById('ctot').value=tot;
+    }
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+</script>
+</head>
+
+<body>
+    <div id="interface">
+            <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h5>A revolução do Google está chegando</h5>
+                
+            </hgroup>  
+            
+                <img id="icone" src='especificacoes.png'>
+
+                <nav id="menu">
+                        <h1><a href="index.html">Menu Principal</a></h1>
+                            <ul type="">
+                                    <li onmouseover="mudafoto('home.png')" onmouseout="mudafoto('contato.png')"><a href="index.html">Home</a></li>
+                                    <li onmouseover="mudafoto('especificacoes.png')" onmouseout="mudafoto('contato.png')"><a href="specs.html"> Especificações</a></li>
+                                    <li onmouseover="mudafoto('fotos.png')" onmouseout="mudafoto('contato.png')"><a href="fotos.html"> Fotos</a></li>
+                                    <li onmouseover="mudafoto('multimidia.png')" onmouseout="mudafoto('contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                                    <li onmouseover="mudafoto('contato.png')" onmouseout="mudafoto('contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                             </ul>
+                    </nav>
+            </header>
+
+
+    <article id="principal">
+    <hgroup>
+    <header>
+    <h4>Tecnologia > Inovações</h4>
+    <h1>Saiba tudo sobre o Google Glass</h1>
+    <h4>por Julia Gomes</h2>
+    <h3>Atualizado em 06/Agosto/2019</h3>
+    </header>
+    </hgroup> 
+
+<form method="POST" id="fcontato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
+    <fieldset id="usuario">
+    <legend>Identificação do Usuário</legend>
+    <p><label for="cnome">Nome:</label><input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+    <p><label for="csenha">Senha:</label><input type="password" name="tsenha" id="csenha" size="20" maxlength="8" placeholder="Crie uma senha"></p>
+    <p><label for="cemail">E-mail:</label><input type="email" name="temail" id="cemail" size="20" maxlength="40" placeholder="Digite seu email"></p>
+    <p><fildset id="sexo"><legend>Sexo</legend>
+        <input type="radio" name="tsexo" id="cmasc"><label for="cmasc">Masculino</label><br>
+        <input type="radio" name="tsexo" id="cfem"><label for="cfem">Feminino</label></fildset></p>
+    <p>Data de Nascimento:<input type="date" name="tdata" id="cdata"></p>
+    </fieldset>
+
+    <fieldset id="endereco">
+    <legend>Endereço do Usuário</legend>
+    <p><label for="crua">Logradouro:</label><input type="text" name="trua" id="crua" size="20" maxlength="100" placeholder="Rua/Avenida"></p>
+    <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="999999"></p>
+    <p><label for="cest">Estado:</label>
+        <select name="test" id="cest">
+            <optgroup label="Região Sudeste">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP" selected>São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+                <option value="SC">Santa Catarina</option>
+                <option value="RGS">Rio Grande do Sul</option>
+                <option value="PR">Paraná</option>
+            </optgroup>
+        </select></p>
+    <p><label for="ccid">Cidade:</label>
+        <input type="text" name="tcid" id="ccid" maxlength="40" size="20" placeholder="Sua cidade" list="cidade">
+        <datalist id="cidade">
+            <option value="Rio de Janeiro"></option>
+            <option value="Nova Iguaçu"></option>
+            <option value="Niterói"></option>
+            <option value="São Paulo"></option>
+            <option value="São José dos Campos"></option>
+            <option value="Juiz de Fora"></option>
+        </datalist>
+    </p>
+    </fieldset>
+
+    <fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+    <p><label for="curg">Grau de Urgência:</label>
+    Min<input type="range" name="turg" id="curg" min="0" max="10" step="1">Máx</p>
+    <p><label for="cmsg">Mensagem:</label>
+        <textarea name="tmsg" id="cmsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+    </p>
+    </fieldset> 
+
+    <fieldset id="pedido">
+    <legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="tped" id="cped" checked>
+        <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label id="ccor">Cor:</label>
+        <input type="color" name="tcor" id="ccor" value="#000066">
+    </p>
+    <p><label id="cqtd">Quantidade:</label>
+        <input type="number" name="tqtd" id="cqtd" min="0" max="5" value="0">
+    </p>
+    <p><label id="ctot">Preço Total: R$</label>
+        <input type="text" name="ttot" id="ctot" placeholder="Total a Pagar" readonly>
+    </p>
+    </fieldset> 
+
+
+<input type="image" name="tenviar" src="../projeto-glass-html5/_imagens/botao-enviar.png">
+</form>
+
+<footer id="rodape">
+        <i>Copyright 2019 - by Julia Gomes</i> </br>
+        <a href="https://www.facebook.com/profile.php?id=100006119268568">Facebook</a> |
+        <a href="https://www.linkedin.com/in/julia-gomes-gaspare-35877b61/Linkedin">Linkedin</a></p>
+</footer>
+        </div>
+        </body>
+        </html>
+       

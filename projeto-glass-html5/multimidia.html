@@ -1,25 +1,68 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
 
-[AQUI ENTRA UMA FOTO]
+<head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="stylesheet" type="text/css" href="./_css/media.css"> 
+</head>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+<script src="_javascript/funcoes.js"></script>
 
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+<body>
+    <div id="interface">
+            <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h5>A revolução do Google está chegando</h5>
+                
+            </hgroup>  
+            
+                <img id="icone" src='multimidia.png'>
+
+                <nav id="menu">
+                        <h1><a href="index.html">Menu Principal</a></h1>
+                            <ul type="">
+                                    <li onmouseover="mudafoto('home.png')" onmouseout="mudafoto('multimidia.png')"><a href="index.html">Home</a></li>
+                                    <li onmouseover="mudafoto('especificacoes.png')" onmouseout="mudafoto('multimidia.png')"><a href="specs.html"> Especificações</a></li>
+                                    <li onmouseover="mudafoto('fotos.png')" onmouseout="mudafoto('multimidia.png')"><a href="fotos.html"> Fotos</a></li>
+                                    <li onmouseover="mudafoto('multimidia.png')" onmouseout="mudafoto('multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+                                    <li onmouseover="mudafoto('contato.png')" onmouseout="mudafoto('multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                             </ul>
+                    </nav>
+            </header>
 
 
-Áudio e Vídeo
+    <article id="principal">
+    <hgroup>
+    <header>
+    <h4>Glass > Multimídia</h4>
+    <h1>Sons e videos</video></h1>
+    <h4>por Julia Gomes</h2>
+    <h3>Atualizado em 06/Agosto/2019</h3>
+    </header>
+    </hgroup>
 
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
 
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+<div id="tv-radio">
+        <audio id="musica" controls="controls"> 
+                <source src="../projeto-glass-html5/_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+                <source src="../projeto-glass-html5/_media/2009-lovers-carvings-bibio.m4a" type="audio/x-aac"/>
+                <source src="../projeto-glass-html5/_media/2009-lovers-carvings-bibio.ogg" type="audio/ogg"/>
+                Desculpe, não foi possível carregar o áudio
+        </audio>
+        <video id="filme" controls="controls" poster="../projeto-glass-html5/_imagens/video-mini03.jpg">
+                <source src="../projeto-glass-html5/_media/getting-started.mp4" type="video/mp4"/>
+                <source src="../projeto-glass-html5/_media/getting-started.webm" type="video/webm"/>
+                <source src="../projeto-glass-html5/_media/getting-started.ogv" type="video/ogg"/>
+                Desculpe, mas não foi possível carregar o vídeo
+        </video>
+</div>
+
+<footer id="rodape">
+        <i>Copyright 2019 - by Julia Gomes</i> </br>
+        <a href="https://www.facebook.com/profile.php?id=100006119268568">Facebook</a> |
+        <a href="https://www.linkedin.com/in/julia-gomes-gaspare-35877b61/Linkedin">Linkedin</a></footer></p>
+        </div>
+        </body>
+        </html>

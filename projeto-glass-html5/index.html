@@ -7,32 +7,42 @@
          <link rel="stylesheet" type="text/css" href="estilo.css">  
                 
     </head>
+
+    <script src="_javascript/funcoes.js"></script>
+
     <body>
         <div id="interface">
             <header id="cabecalho">
             <hgroup>
                 <h1>Google Glass</h1>
-                <h2>A revolução do Google está chegando</h2>
+                <h5>A revolução do Google está chegando</h5>
                 
             </hgroup>  
             
                 <img id="icone" src='glass-oculos-preto-peq.png'>
 
                 <nav id="menu">
-                    <h1><a href="_textos/index-txt.html">Menu Principal</a></h1>
+                    <h1><a href="index.html">Menu Principal</a></h1>
                         <ul type="">
-                             <li><a href="_textos/specs-txt.html"> Especificações</a></li>
-                            <li><a href="_textos/fotos-txt.html"> Fotos</a></li>
-                             <li><a href="_textos/multimidia-txt.html">Multimídia</a></li>
-                             <li><a href="_textos/fale-conosco-txt.html">Fale conosco</a></li>
+                             <li onmouseover="mudafoto('home.png')" onmouseout="mudafoto('glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+                             <li onmouseover="mudafoto('especificacoes.png')" onmouseout="mudafoto('glass-oculos-preto-peq.png')"><a href="specs.html"> Especificações</a></li>
+                             <li onmouseover="mudafoto('fotos.png')" onmouseout="mudafoto('glass-oculos-preto-peq.png')"><a href="fotos.html"> Fotos</a></li>
+                             <li onmouseover="mudafoto('multimidia.png')" onmouseout="mudafoto('glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+                             <li onmouseover="mudafoto('contato.png')" onmouseout="mudafoto('glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
                          </ul>
                 </nav>
             </header>
+
+
+<section id="site">
+<article id="principal">
 <hgroup>
-<h3>Tecnologia > Inovações</h3>
-<h1>Saiba tudo sobre o Google Glass</h1>
-<h2>por Julia Gomes</h2>
-<h3>Atualizado em 06/Agosto/2019</h3>
+    <header>
+        <h4>Tecnologia > Inovações</h4>
+        <h1>Saiba tudo sobre o Google Glass</h1>
+        <h4>por Julia Gomes</h2>
+        <h3>Atualizado em 06/Agosto/2019</h3>
+   </header>
 </hgroup>
 <h2>O que é</h2>
 <p>O Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos 
@@ -56,12 +66,15 @@ conteúdos em realidade aumentada. Também chamado de <a href="https://www.googl
      2014.</p>
 
 <h2>Especificações Técnicas</h2>
-<p>Tabela Técnica do Google Glass Mar/2013
+<table id="tablespec"><p><caption id="table1">Técnica do Google Glass <span>Mar/2013</span></caption>
 
-Tela:Resolução equivalente a tela de 25"
-Camera: 5MP para fotos / 720p para vídeos
-Conectividade: Wi-Fi/ Bluetooth
-Memória Interna: 12GB</p>
+<tr><td class="ce">Tela:</td><td class="cd">Resolução equivalente a tela de 25"</td></tr>
+<tr><td class="ce" rowspan="2">Camera:</td><td class="cd">5MP para fotos</td></tr>
+<tr><td class="cd">720p para vídeos</td></tr>
+<tr><td class="ce" rowspan="2">Conectividade:</td><td class="cd"> Wi-Fi</td></tr>
+<tr><td class="cd">Bluetooth</td></tr>
+<tr><td class="ce">Memória Interna:</td><td class="cd"> 12GB</td></tr>
+</p></table>
 
 <h2>Como funciona</h2>
 <p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na 
@@ -73,12 +86,20 @@ como selecionar opções com o movimento da cabeça</p>
  que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado,
  mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
-[AQUI ENTRA UM VÍDEO]
+<video id="principai" controls="controls">
+    <source src="../projeto-glass-html5/_media/how-it-feels.mp4" type="video/mp4">
+</video>
 
-<h2>Outras Notícias</h2>
-<h3>Vídeo mais recente<h3>
+</article>
+</section>
 
-[AQUI ENTRA UM VÍDEO]
+<aside id="lateral">
+<h1>Outras Notícias</h2>
+<h2>Vídeo mais recente<h3>
+
+    <video id="lateral" controls="controls">
+        <source src="../projeto-glass-html5/_media/one-day.mp4" type="video/mp4">
+    </video>
 
 <h2>Novidades no Glass</h2>
 <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita 
@@ -89,9 +110,13 @@ no mercado: a gigante das buscas usará um sistema de áudio baseado na transdu�
 Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão
  640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta 
  definição colocado a 2,5 metros de distância do espectador.
+</aside>
 
-Copyright 2019 - by Julia Gomes
-Facebook | Twitter</p>
+  
+<footer id="rodape">
+<i>Copyright 2019 - by Julia Gomes</i> </br>
+<a href="https://www.facebook.com/profile.php?id=100006119268568">Facebook</a> |
+<a href="https://www.linkedin.com/in/julia-gomes-gaspare-35877b61/Linkedin">Linkedin</a></footer></p>
 </div>
 </body>
 </html>
